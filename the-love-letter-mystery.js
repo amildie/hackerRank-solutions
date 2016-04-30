@@ -13,9 +13,7 @@ function processData(input) {
                 break;
             }
 
-            var max = Math.max(word[j].charCodeAt(0), word[k].charCodeAt(0));
-            var min = Math.min(word[j].charCodeAt(0), word[k].charCodeAt(0));
-            m += max-min;
+            m += Math.abs(word[j].charCodeAt(0)-word[k].charCodeAt(0));
         }
 
         console.log(m);
