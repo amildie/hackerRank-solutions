@@ -3,21 +3,21 @@
 function processData(input) {
     lines = input.split('\n');
     
-    var aux = lines.shift().split(' ');
-    var n = aux[0];
-    var k = aux[1];
+    var t = lines.shift().split(' ');
+    var n = t[0];
+    var k = t[1];
     var a = lines.shift().split(' ').sort(function(a, b){return a-b});
     
-    var sum = 0, count = 0;
+    var s = 0, c = 0;
     for(var i = 0; i < n; ++i) {
-        sum += parseInt(a[i]);
-        if(sum > k) {
+        s += parseInt(a[i]);
+        if(s > k) {
             break;
         }
-        count++;
+        c++;
     }
 
-    console.log(count);
+    console.log(c);
 } 
 
 process.stdin.resume();
